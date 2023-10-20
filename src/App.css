@@ -1,5 +1,59 @@
-main {
-  text-align: center;
-  vertical-align: center;
-  line-height: 100vh
+*{
+  box-sizing:border-box;
+  margin:0px;
+  padding:0px;
 }
+.App{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  width :100%;
+  background-color:#b861ff;
+}
+
+.container{
+  height:300px;
+  width:250px;
+  border:2px solid black;
+  border-radius:3px;
+  padding:8px;
+  background-color:white;
+}
+.ip1{
+  height:190px;
+   display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+}
+
+.ip2{
+  height:60px;
+   display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+}
+
+input{
+  height:30px;
+  width:200px;
+  padding:5px;
+}
+
+button{
+  height:30px;
+  width:200px;
+  padding:5px;
+  background-color:#ff5252;
+  font-weight:bold;
+  border:1px solid black;
+  border-radius:5px;
+}
+
+button:hover{
+   background-color:grey;
+}
+
