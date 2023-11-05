@@ -26,12 +26,15 @@
    display:flex;
     flex-direction:column;
     align-items:center;
-    /* justify-content:space-evenly; */
+    justify-content:space-evenly;
 }
 input{
-  margin-bottom:30px
+  /* margin-bottom:30px */
 }
-
+span{
+  color:red;
+  margin-bottom:8px;
+}
 form{
   display:flex;
   flex-direction:column;

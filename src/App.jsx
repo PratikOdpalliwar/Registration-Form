@@ -1,5 +1,7 @@
 import './App.css'
 import { useState } from "react";
+
+
 export default function App() {
 
   const [values, setValues] = useState({
@@ -8,7 +10,12 @@ export default function App() {
     email: ""
   })
 
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(false); 
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+  }
 
   const handleFirstNameInputChange = (e) => {
     setValues({ ...values, firstName: e.target.value })
@@ -22,10 +29,7 @@ export default function App() {
     setValues({ ...values, email: e.target.value })
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  }
+  
 
   return (
     <div className='App'>
@@ -36,25 +40,35 @@ export default function App() {
 
           <div className="ip1">
             <input
+              value={values.firstName}
               className="first-name"
               placeholder="First Name"
               name="firstName"
               onChange={handleFirstNameInputChange}
             />
+            {values.firstName==="" ? <span>Please enter a first name</span>: null}
 
-            
+
             <input
+              value={values.lastName}
               className="last-name"
               placeholder="Last Name"
               name="lastName"
               onChange={handleLastNameInputChange}
             />
+            {values.lastName ==="" ? <span>Please enter a last name</span> : null}
+
+
             <input
+              value={values.email}
               className="email"
               placeholder="Email"
               name="email"
               onChange={handleEmailInputChange}
             />
+            {values.email==="" ? <span>please enter an email</span> : null}
+
+
           </div>
 
           <div className="ip2">
